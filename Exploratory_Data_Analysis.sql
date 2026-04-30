@@ -307,31 +307,38 @@ ORDER BY COUNT(*) DESC;
 --     as end are still captured. time_of_day is included in the join key
 --     to prevent row multiplication across time periods.
 WITH start_station AS (
-  SELECT
+  SELECT 
     time_of_day,
-    start_station_name                                                     AS station_name,
-    CONCAT(start_station_latitude, ',', start_station_longitude)           AS location,
-    COUNT(*)                                                               AS start_station_count
+    start_station_id AS station_id,
+    start_station_name AS station_name,
+    CONCAT(start_station_latitude, ',', start_station_longitude) AS location, -- Fixed coordinates
+    COUNT(*) AS start_station_count
   FROM `portfolio-projects-494318.citibike_trips.mv_CusRsimSub`
-  GROUP BY 1, 2, 3
+  GROUP BY 1, 2, 3,4
+  
 ),
+
 end_station AS (
-  SELECT
+  SELECT 
     time_of_day,
-    end_station_name                                                       AS station_name,
-    COUNT(*)                                                               AS end_station_count
+    end_station_id AS station_id,
+    end_station_name AS station_name,
+    COUNT(*) AS end_station_count
   FROM `portfolio-projects-494318.citibike_trips.mv_CusRsimSub`
-  GROUP BY 1, 2
+  GROUP BY 1, 2,3
+ 
 )
-SELECT
-  COALESCE(s.station_name,  e.station_name)  AS station_name,
+
+SELECT 
+  COALESCE(s.station_id, e.station_id) AS station_id,
+  COALESCE(s.station_name, e.station_name) AS station_name,
   s.location,
-  COALESCE(s.time_of_day,   e.time_of_day)   AS time_of_day,
-  IFNULL(s.start_station_count, 0)           AS start_station_count,
-  IFNULL(e.end_station_count,   0)           AS end_station_count,
+  COALESCE(s.time_of_day, e.time_of_day) AS time_of_day,
+  IFNULL(s.start_station_count, 0) AS start_station_count,
+  IFNULL(e.end_station_count, 0) AS end_station_count,
   (IFNULL(s.start_station_count, 0) + IFNULL(e.end_station_count, 0)) AS total_station_traffic
 FROM start_station s
 FULL OUTER JOIN end_station e
-  ON s.station_name = e.station_name
- AND s.time_of_day  = e.time_of_day
-ORDER BY total_station_traffic DESC;
+  ON s.station_id = e.station_id 
+  AND s.time_of_day = e.time_of_day  
+ORDER BY total_station_traffic DESC; 
