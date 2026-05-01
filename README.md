@@ -30,7 +30,7 @@ Data privacy: The dataset contains no customer IDs, names, or payment informatio
 |---|---|
 | [`Data Cleaning Pipepeline`](Data-Cleaning-Pipeline.sql) | 10-stage cleaning pipeline — nulls, deduplication, station standardisation, outlier removal |
 | [`Exploratory Data Analysis`](Exploratory_Data_Analysis.sql) | Exploratory analysis — duration distributions, seasonal patterns, cohort isolation, station ranking |
-| [`The Silent Subscriber Stations`](Top_stations_Hidden_commuters.csv) | Raw query output: 855 stations ranked by Hidden Commuter morning traffic |
+| [`The Hidden Cummuter Stations`](Top_stations_Hidden_commuters.csv) | Raw query output: 855 stations ranked by Hidden Commuter morning traffic |
 
 ---
 
