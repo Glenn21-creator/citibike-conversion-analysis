@@ -22,8 +22,6 @@ Hidden inside the casual Customer population is a cohort of daily commuters who 
 This project uses the [`Citi Bike NYC trip dataset`](https://console.cloud.google.com/bigquery/add-data(cameo:product/city-of-new-york/nyc-citi-bike)?project=project-73afdb23-3f97-4a50-abe), a publicly available real-world dataset covering millions of individual bike trips across New York City. The dataset includes trip-level timestamps, station GPS coordinates, user type segmentation (Subscriber / Customer), and critically, birth_year and gender fields that proved central to the key finding of this analysis.
 Data privacy: The dataset contains no customer IDs, names, or payment information. No individual rider can be identified or tracked. This constraint directly shaped the recommendations
 
-📄 Full data source details and credibility assessment are documented in the [case study report](Google_Data_Analytics_End_Project.docx).
-
 ---
 
 ## What Was Built
