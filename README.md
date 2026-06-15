@@ -104,7 +104,7 @@ Approximate financial picture for these riders:
 
 ### 4️⃣ Locating Them on the Map
 
-Since the dataset contains no customer IDs, the docking station is the only place where this audience can be reached. A `FULL OUTER JOIN` on start and end station traffic within the Hidden Commuter segment identified 855 stations with morning activity from this cohort. The top 10 account for 9.7% of all Hidden Commuter interactions.
+Since the dataset contains no customer IDs, the docking station is the only place where this audience can be reached. A `FULL OUTER JOIN` on start and end station traffic within the Hidden Commuter segment isolated 855 stations with morning activity from this cohort. The top 10 account for 9.7% of all Hidden Commuter interactions.
 
 | Rank | Station | Total Morning Trips |
 |---|---|---|
