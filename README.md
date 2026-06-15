@@ -44,7 +44,7 @@ Three numbers tell the whole story:
 | 🟠 **86,08%** | Share of the target cohort who are under 18 school students riding to class on single-ride tickets on weekdays|
 | 🟢 **11,109** | Morning trips through the single highest-traffic station, Central Park S & 6 Ave 
 
-The analysis confirmed an obvious behaviour: Subscribers commute throughout the year, while Customers leisure-ride. But it also revealed something the business didn't know — a hidden group of casual riders who commute every weekday morning, pay leisure prices to do it, and are overwhelmingly young. The station where they ride is known. The message that would resonate with them is obvious. The only missing piece was the data to back it up.
+The analysis confirmed an obvious behaviour: Subscribers commute throughout the year, while Customers leisure-ride. But it also revealed something the business didn't know a hidden group of casual riders who commute every weekday morning, pay leisure prices to do it, and are overwhelmingly young. The station where they ride is known. The message that would resonate with them is obvious. The only missing piece was the data to back it up.
 
 
 ---
